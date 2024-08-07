@@ -114,35 +114,10 @@ function getUserLocation() {
     alert("Геолокация недоступна");
   }
 }
-// изменение геометрии
-function displayGeoJSON(data) {
-  const editableLayers = new L.FeatureGroup();
-  map.addLayer(editableLayers);
 
-  const drawPluginOptions = {
-    position: "topright",
-    draw: {
-      marker: false,
-      circlemarker: false,
-      polyline: false,
-      circle: false,
-      polygon: false,
-      rectangle: false,
-      edit: {
-        featureGroup: editableLayers,
-      },
-    },
-  };
+// Изменение геометрии объекта
+function modifyGeometry(layer, feature) {
+  const geometryType = feature.geometry.type || "Без названия";
 
-  const drawControl = new L.Control.Draw(drawPluginOptions);
-  map.addControl(drawControl);
-
-  L.geoJSON(data, {
-    onEachFeature: function (feature, layer) {
-      editableLayers.addLayer(layer);
-      layer.on("click", function (e) {
-        modifyGeometry(layer, feature);
-      });
-    },
-  }).addTo(map);
+  layer.bindPopup(`Тип геометрии: ${geometryType}`).openPopup();
 }

@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карта с интерфейсом</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/x-icon" href="./img/map.ico" />
   </head>
   <body>
     <div class="toolbar">
-      <select onchange="goToLocationDropdown(this)">
-        <option value="43.7374,39.8008">Красная Поляна</option>
-        <option value="51.6894,-0.9583">Парк The Making of Harry Potter</option>
-        <option value="54.886440,73.347775">Омск, Соленое озеро</option>
-        <option value="55.703087,37.530862">Москва, МГУ</option>
-        <option value="48.8584,2.2941">Эйфелева башня</option>
-        <option value="55.009073,73.297676">Омск, G-Drive Arena</option>
-        <option value="54.986940,73.381404">Омск, Офис Град</option>
-      </select>
+      <div class="dropdown">
+        <button class="dropbtn">Узнайте где находится..</button>
+
+        <div class="dropdown-content">
+          <button onclick="goToLocation(43.7374, 39.8008)" class="menu-item">
+            Красная Поляна
+          </button>
+          <button onclick="goToLocation(51.6894, -0.9583)" class="menu-item">
+            The Making of Harry Potter
+          </button>
+          <button
+            onclick="goToLocation(54.886440, 73.347775)"
+            class="menu-item"
+          >
+            Омск, Соленое озеро
+          </button>
+          <button
+            onclick="goToLocation(55.703087, 37.530862)"
+            class="menu-item"
+          >
+            Москва, МГУ
+          </button>
+          <button onclick="goToLocation(48.8584, 2.2941)" class="menu-item">
+            Эйфелева башня
+          </button>
+          <button
+            onclick="goToLocation(55.009073, 73.297676)"
+            class="menu-item"
+          >
+            Омск, G-Drive Arena
+          </button>
+          <button
+            onclick="goToLocation(54.986940, 73.381404)"
+            class="menu-item"
+          >
+            Омск, Офис Град
+          </button>
+        </div>
+      </div>
 
       <input
         type="file"
