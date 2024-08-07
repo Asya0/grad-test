@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карта с интерфейсом</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/map.ico" />
+  </head>
+  <body>
+    <div class="toolbar">
+      <select onchange="goToLocationDropdown(this)">
+        <option value="43.7374,39.8008">Красная Поляна</option>
+        <option value="51.6894,-0.9583">Парк The Making of Harry Potter</option>
+        <option value="54.886440,73.347775">Омск, Соленое озеро</option>
+        <option value="55.703087,37.530862">Москва, МГУ</option>
+        <option value="48.8584,2.2941">Эйфелева башня</option>
+        <option value="55.009073,73.297676">Омск, G-Drive Arena</option>
+        <option value="54.986940,73.381404">Омск, Офис Град</option>
+      </select>
+
+      <input
+        type="file"
+        id="geojsonFile"
+        accept=".geojson"
+        style="display: none"
+        onchange="onFileChange(this)"
+      />
+      <button onclick="document.getElementById('geojsonFile').click()">
+        Импорт и отображение GeoJSON
+      </button>
+      <button onclick="toggleTheme()" class="theme-toggle">
+        Переключить тему
+      </button>
+      <button onclick="getUserLocation()">Мое местоположение</button>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

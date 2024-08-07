@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+#map {
+  height: 100vh;
+  width: 100%;
+}
+.toolbar {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  transition: background-color 0.2s ease-in;
+}
+.toolbar button:hover {
+  background-color: rgb(107, 107, 107);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+}
+button,
+select {
+  margin: 5px;
+  padding: 8px 12px;
+}
+
+.theme-toggle {
+  cursor: pointer;
+}
+/* темная тема */
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme #map {
+  filter: invert(50%);
+}
+/* светлая тема */
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.leaflet-top {
+  top: 50% !important;
+}
+.leaflet-left {
+  left: 96% !important;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}
