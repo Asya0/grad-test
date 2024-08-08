@@ -1,0 +1,10 @@
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+.dark-theme #map {
+  filter: invert(50%);
+}
+.dark-theme #map {
+  filter: invert(50%);
+}

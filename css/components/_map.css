@@ -1,0 +1,13 @@
+#map {
+  height: 100vh;
+  width: 100%;
+}
+.leaflet-top {
+  top: 50% !important;
+}
+.leaflet-left {
+  left: 96% !important;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}

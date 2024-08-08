@@ -1,0 +1,39 @@
+.toolbar {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  transition: background-color 0.2s ease-in;
+}
+.toolbar button {
+  border-radius: 9px;
+}
+.toolbar button:hover {
+  background-color: rgb(107, 107, 107);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+}
+
+.toolbar {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  transition: background-color 0.2s ease-in;
+}
+/* .toolbar button:hover {
+  background-color: rgb(107, 107, 107);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+} */
