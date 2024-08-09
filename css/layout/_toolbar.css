@@ -32,8 +32,39 @@
   flex-wrap: wrap;
   transition: background-color 0.2s ease-in;
 }
-/* .toolbar button:hover {
-  background-color: rgb(107, 107, 107);
-  transition: background-color 0.2s ease-in;
-  cursor: pointer;
-} */
+
+@media (max-width: 950px) {
+  .toolbar {
+    left: 30px;
+    right: 30px;
+    justify-content: space-between;
+  }
+  .geoJson {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .toolbar {
+    max-width: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .toolbar {
+    justify-content: center;
+    right: auto;
+  }
+}
+@media (max-width: 450px) {
+  .toolbar {
+    justify-content: center;
+    left: 15px;
+    right: 15px;
+  }
+  @media (max-width: 350px) {
+    .toolbar {
+      left: 10px;
+      right: 10px;
+      padding: 5px;
+    }
+  }
+}

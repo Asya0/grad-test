@@ -28,3 +28,12 @@
 .dropdown-content button {
   width: 100%;
 }
+@media (max-width: 540px) {
+  .dropdown {
+    left: 0px;
+    right: 10px;
+  }
+  .geoJson {
+    display: none;
+  }
+}

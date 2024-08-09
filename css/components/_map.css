@@ -11,3 +11,19 @@
 .leaflet-control-attribution {
   display: none !important;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .leaflet-left {
+    left: 90% !important;
+  }
+}
+@media (max-width: 768px) {
+  .leaflet-left {
+    left: 90% !important;
+  }
+}
+@media (max-width: 540px) {
+  .leaflet-left {
+    left: 82% !important;
+  }
+}

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
@@ -61,13 +65,22 @@
         style="display: none"
         onchange="onFileChange(this)"
       />
-      <button onclick="document.getElementById('geojsonFile').click()">
+      <button
+        onclick="document.getElementById('geojsonFile').click()"
+        class="geoJson"
+      >
         Импорт и отображение GeoJSON
       </button>
-      <button onclick="toggleTheme()" class="theme-toggle">
-        Переключить тему
+      <button
+        onclick="toggleTheme()"
+        class="theme-toggle"
+        title="Переключить тему"
+      >
+        <i class="fas fa-adjust"></i>
       </button>
-      <button onclick="getUserLocation()">Мое местоположение</button>
+      <button onclick="getUserLocation()" title="Мое местоположение">
+        <i class="fa fa-location-arrow"></i>
+      </button>
     </div>
 
     <div id="map"></div>
