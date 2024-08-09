@@ -8,3 +8,6 @@
 .dark-theme #map {
   filter: invert(50%);
 }
+.dark-theme .toolbar {
+  gap: 10px;
+}
